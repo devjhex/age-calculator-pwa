@@ -1,0 +1,47 @@
+{
+    "appTitle":"Calculateur d\u00E2ge",
+    "inputGroupAriaLabel":"Appuyez sur Entr\u00E9e pour entrer dans le groupe d'entr\u00E9e",
+    "dayInput":{
+        "label":"JOUR",
+        "placeholder":"DD",
+        "ariaLabel":"Jour de naissance",
+        "instruction":"Entrez le jour de votre naissance en chiffre (par exemple 01 pour le l\u00E8re.)"
+    }, 
+    "monthInput":{
+        "label":"MOIS",
+        "placeholder":"MM",
+        "ariaLabel":"Mois de naissance",
+        "instruction":"Entrez le mois de votre naissance sous forme de num\u00E9ro \u00E0 deux chiffres (par exemple 01 pour janvi\u00E9r."
+    }, 
+    "yearInput":{
+        "label":"ANN\u00C9E",
+        "placeholder":"YYYY",
+        "ariaLabel":"Ann\u00E9e de naissance",
+        "instruction":"Entr\u00E9z le jour de votre naissance ne tant que nombre entre 1900 et 2100."
+    },
+    "button":{
+        "ariaLabel":"Calculer L'\u00E2ge",
+        "instruction":"Appayez sur Entr\u00E9e pourcalculer et afficher l'\u00E2ge."
+    },
+    "image":{
+        "alt":"calculer l'\u00E2ge"
+    },
+    "resultsDisplay":{
+        "bigYears":"ann\u00E9es",
+        "bigMonths":"mois",
+        "bigDays":"jours"
+    },
+    "errorMessages":{
+        "dayError":"Doit \u00EAtre un jour valide",
+        "monthError":"Doit \u00EAtre un mois valide",
+        "yearError":"Doit \u00EAtre  dans le pass\u00E9!",
+        "inputError":"Seuls les chiffres sont autoris\u00E9s!",
+        "emptyInputError":"Ce champ est requis!"
+    },
+    "words":{
+        "and":"et",
+        "months":"mois",
+        "years":"ann\u00E9e",
+        "days":"jour"
+    }
+}

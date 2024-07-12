@@ -1,0 +1,47 @@
+{
+    "appTitle":"Age Calculator",
+    "inputGroupAriaLabel":"Press Enter to enter the input group",
+    "dayInput":{
+        "label":"DAY",
+        "placeholder":"DD",
+        "ariaLabel":"Day of Birth",
+        "instruction":"Enter the day of your birth as a number (e.g. 01 for 1st)."
+    }, 
+    "monthInput":{
+        "label":"MONTH",
+        "placeholder":"MM",
+        "ariaLabel":"Month of Birth",
+        "instruction":"Enter the month of your birth as a two digit number (e.g. 01 for January)."
+    }, 
+    "yearInput":{
+        "label":"YEAR",
+        "placeholder":"YYYY",
+        "ariaLabel":"Year of Birth",
+        "instruction":"Enter the day of your birth as a number between 1900 and 2100."
+    },
+    "button":{
+        "ariaLabel":"Calculate Age",
+        "instruction":"Press Enter to calculate and display the age"
+    },
+    "image":{
+        "alt":"calculate Age"
+    },
+    "resultsDisplay":{
+        "bigYears":"years",
+        "bigMonths":"months",
+        "bigDays":"days"    
+    },
+    "errorMessages":{
+        "dayError":"Must be a valid day!",
+        "monthError":"Must be a valid month!",
+        "yearError":"Must be in the past!",
+        "inputError":"Only numbers are allowed!",
+        "emptyInputError":"This field is required!"
+    },
+    "words":{
+        "and":"and",
+        "months":"month",
+        "years":"year",
+        "days":"day"
+    }
+}

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "poppins";
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "poppins-italics";
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "poppins-lightItalics";
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+    font-display: swap;
+}
+
+@layer components{
+    .digit {
+        @apply flex items-center justify-center text-priPurple w-full h-full;
+    }
+    .partsContainer{
+        @apply flex w-max  h-[90px] overflow-hidden;
+    }
+    .digitContainer{
+        @apply flex flex-col  w-full h-full  relative transition-transform duration-[.5s] ease-in-out;
+    }
+   
+
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{
+    appearance: none;
+    margin:0;
+}

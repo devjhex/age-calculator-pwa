@@ -1,0 +1,25 @@
+{
+  "name": "age-calculator-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build:css:dev": "tailwindcss -i input.css -o output.css --watch",
+    "build:css:prod": "cross-env NODE_ENV=production tailwindcss -i input.css -o output.css --minify",
+    "build:js": "webpack",
+    "dev": "live-server --port=3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.39",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

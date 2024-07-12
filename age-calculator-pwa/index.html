@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="font-poppins">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Age Calculator app | Calculate your exact age in years, months and days.</title>
+    <meta name="description" content="Age Calculator application - Keep up to date when it comes to your age in years, months and days.">
+    <meta name="theme-color" content="#854dff">
+    
+    <meta property="og:title" content="Age Calculator">
+    <meta  property="og:description" content="Age Calculator application - Keep up to date when it comes to your age in years, months and days.">
+    <meta property="og:image" content="./assets/images/logo512.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devjhex-age-calculator-pwa.netlify.app">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Age Calculator app | Calculate your exact age in years, months and days.">
+    <meta property="twitter:description" content="Age Calculator application - Keep up to date when it comes to your age in years, months and days.">
+    <meta property="twitter:url" content="https://devjhex-age-calculator-pwa.netlify.app">
+    <meta name="twitter:image" content="./assets/images/logo512.jpg">
+    <script type="application/ld+json">
+      {
+        "@context":"http://schema.org",
+        "@type":"SoftwareApplication",
+        "name":"Age Calculator App",
+        "operatingSystem":"Web",
+        "applicationCategory":"Utility",
+        "description":"Age Calculator is a simple yet powerful app that calculates your age based on your birth date. It provides accurate results in years, months and days.",
+        "url":"https://devjhex-age-calculator-pwa.netlify.app",
+        "author":{
+          "@type":"Organization",
+          "name":"devjhex Technologies Inc."
+        },
+        "offers":{
+          "@type":"Offer",
+          "priceCurrency":"USD",
+          "price":"0",
+          "availability":"http:/schema.org/InStock",
+          "seller":{
+            "@type":"Organization",
+            "name": "devjhex Technologies Inc."
+          }
+        }
+      }
+    </script>
+
+  </head>
+  <body class="bg-neuLightGrey w-screen h-screen">
+    <main class="w-full h-full flex items-start justify-center">
+      <div class="absolute top-6">
+        <label for="select-language">Select Language</label>
+      <select name="langSelection" value="English" id="select-language" class="cursor-pointer">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+      </select>
+      </div>
+      <section id="calculator-application" tabindex="0" role="application" aria-labelledby="calculator-heading" class="bg-neuWhite w-11/12 max-w-[600px] px-4 md:px-8 py-8 mt-[4rem] rounded-[1.4rem] rounded-br-[6rem] md:rounded-br-[7rem] overflow-hidden">
+        <h1 id="calculator-heading" class="sr-only appTitle">Age Calculator</h1>
+        <div id="input-group-container" class="md:p-2 inputGroupAriaLabel" tabindex="0" role="button" aria-label="Press Enter to enter the input group">
+          <form id="age-form">
+            <div class="text-neuSmokeGrey md:w-10/12 flex justify-evenly gap-[1rem] md:p-2">
+    
+              <div class="flex items-center md:items-start flex-col w-max md:w-1/3 ">
+                <label class="self-start text-[.8rem] font-[600] tracking-widest dayLabel" for="dayInput">DAY</label>
+                <input tabindex="-1" class="w-[90px] md:w-full h-[2rem] py-6 px-4 border border-neuLightGrey rounded-[.4rem] text-[1.3rem] focus:outline-priPurple text-neuOffBlack  self-start" id="dayInput" type="number" autocomplete="off" placeholder="DD" name="day" aria-label="Day of Birth" aria-describedby="day-instruction" oninput="this.value=this.value.replace(/[^0-9]/g, '');">
+                <span id="day-instruction" class="sr-only dayInstruction">Enter the day of your birth as a number (e.g. 01 for 1st). </span>
+                <span class="font-poppinsLightItalics text-[.8rem] items-start text-priLightRed hidden dayErrorMessage errorMessage" role="alert" aria-live="assertive" aria-relevant="all"></span>
+              </div>
+              <div class="flex items-center md:items-start flex-col w-max md:w-1/3 ">
+                <label class="self-start text-[.8rem] font-[600] tracking-widest monthLabel" for="monthInput">MONTH</label>
+                <input tabindex="-1" class="self-start w-[90px] md:w-full h-[2rem] py-6 px-4 border border-neuLightGrey rounded-[.4rem] text-[1.3rem] focus:outline-priPurple text-neuOffBlack" id="monthInput" autocomplete="off" placeholder="MM" name="month" aria-label="Month of Birth" aria-describedby="month-instruction" min="1" max="12" oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="number" required>
+                <span id="month-instruction" class="sr-only monthInstruction">Enter the month of your birth as a two digit number (e.g. 01 for January).</span>
+                <span class="font-poppinsLightItalics text-[.8rem] items-start text-priLightRed  mt-1 monthErrorMessage errorMessage hidden" role="alert" aria-live="assertive" aria-relevant="all"></span>
+              </div>
+              <div class="flex items-center md:items-start flex-col w-max md:w-1/3 ">
+                <label class="self-start text-[.8rem] font-[600] tracking-widest yearLabel" for="yearInput">YEAR</label>
+                <input tabindex="-1" class="self-start w-[90px] md:w-full h-[2rem] py-6 px-4 border border-neuLightGrey rounded-[.4rem] text-[1.3rem] focus:outline-priPurple text-neuOffBlack font-extrabold" id="yearInput" autocomplete="off" placeholder="YYYY" type="number" name="year" aria-label="Year of Birth" aria-describedby="year-instruction" min="1900" max="2100" oninput="this.value=this.value.replace(/[^0-9]/g, '');">
+                <span id="year-instruction" class="sr-only yearInstruction">Enter the day of your birth as a number between 1900 and 2100. </span>
+                <span class="font-poppinsLightItalics text-[.8rem] items-start text-priLightRed hidden yearErrorMessage errorMessage" role="alert" aria-live="assertive" aria-relevant="all"></span>
+              </div>
+            </div>
+
+            <!--* Middle Section -->
+        <div class="mt-6 md:mt-1 md:w-11/12 h-[6rem] md:h-[4rem]  relative flex items-center ">
+
+          <!--! decorative line -->
+          <div class="decorativeLive w-full h-[2px] bg-neuLightGrey z-0"></div>
+    
+          <div  class="absolute z-10 left-1/2 -translate-x-1/2 md:left-full">
+            <button tabindex="-1" aria-label="Calculate Age" aria-describedby="calculate-instruction" type="submit" class="w-[70px] md:w-[80px] h-[70px] md:h-[80px] rounded-full bg-priPurple flex items-center justify-center hover:bg-neuOffBlack button">
+              <span id="calculate-instruction" class="sr-only buttonInstruction">Press Enter to calculate and display the age</span>
+              <img width="46px" height="44px" class="w-[35px]" src="./assets/images/icon-arrow.svg" alt="calculate Age">
+            </button>
+          </div>
+          </div>
+          </form>
+        </div>
+        
+        <!--* Output Section  -->
+        <div id="resultsOutput" tabindex="0"  role="presentation" class="flex flex-col">
+            <div aria-hidden="true" tabindex="-1">
+
+              <div class="flex gap-[.5rem] font-poppinsItalics font-[800] text-[4rem]">
+                    <div id="yearsContainer" class="partsContainer">
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-[2.5rem] s:text-[3rem] sm:text-[4rem] self-end md:self-start bigYears">
+                      years
+                    </span>
+              </div>
+              <div class="flex gap-[.5rem] font-poppinsItalics font-[800] text-[4rem]">
+                    <div id="monthsContainer" class="partsContainer">
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-[2.5rem] s:text-[3rem] sm:text-[4rem] self-end md:self-start bigMonths">
+                      months
+                    </span>
+              </div>
+              <div class="flex gap-[.5rem] font-poppinsItalics font-[800] text-[4rem]">
+                    <div id="daysContainer" class="partsContainer">
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                      <div class="digitContainer">
+                        <div class="digit">
+                          -
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-[2.5rem] s:text-[3rem] sm:text-[4rem] self-end md:self-start bigDays">
+                      days
+                    </span>
+              </div>
+            </div>
+          <!-- !Results container with ARIA live region -->
+          <div id="result-container" aria-live="polite" aria-atomic="true" class="sr-only">
+            <p id="result" class="age-output"></p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+      
+    <script src="./dist/bundle.js" type="module"></script>
+
+  </body>
+</html>
