@@ -1,6 +1,6 @@
 # Age Calculator PWA
 
-![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Age calculator app coding challenge](./age-calculator-pwa/design/desktop-preview.jpg)
 
 A progressive Web App (PWA) that calculates the age of a user based on their date of birth.
 The app supports multiple languages (English and French) and adheres to the best practices for accessibility, performance and SEO.
